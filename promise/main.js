@@ -62,7 +62,6 @@ const TaskFour = () => {
     );
 }
 
-
 // TaskOne()
 //     .then(res => console.log(res))
 //     .then(TaskTwo)
