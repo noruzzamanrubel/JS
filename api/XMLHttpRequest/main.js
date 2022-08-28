@@ -9,7 +9,7 @@ makeRequest = (method, url, data) => {
         console.log('some thing is wrong')
     }
     xhr.setRequestHeader('Content-type', 'application/json',)
-    
+
     xhr.send(JSON.stringify(data));
 }
 
@@ -25,5 +25,26 @@ const sendData = () => {
     });
 }
 
+const updateData = () => {
+    makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+        title: 'foo Update',
+        body: 'bar Update',
+        userId: 1,
+    });
+}
+
+const singleDataUpdate = () => {
+    makeRequest('PATCH', 'https://jsonplaceholder.typicode.com/posts/1', {
+        title: 'Single Foo Update',
+    });
+}
+
+const deleteData = () => {
+    makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1', {
+    });
+}
 // getData();
-sendData();
+// sendData();
+// updateData();
+// singleDataUpdate();
+deleteData();
